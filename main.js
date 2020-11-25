@@ -1,0 +1,1 @@
+(()=>{"use strict";new function(){this.title="Title",this.description="Description",this.dueDate="10/30/2020",this.priority=1},window.localStorage.setItem("work_stuff",[])})();
