@@ -9,7 +9,9 @@ const project = () => {
   localStorage.setItem("work_stuff", JSON.stringify(project));
   let tasks = JSON.parse(localStorage.getItem("work_stuff") || "[]");
 
-  document.getElementById('c1_task1').innerHTML = tasks[0].title;
+  //document.getElementById('c1_task1').innerHTML = tasks[0].title;
+  //document.getElementById('c1_task2').innerHTML = tasks[1].title;
+  
 
   return true;
 
