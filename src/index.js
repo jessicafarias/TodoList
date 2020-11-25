@@ -1,13 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
-import toDo from './todo';
-import project from './project';
+import './style.css';
+import retrieveTasks from './retrieve_tasks';
 
 const index = () =>{
 
-  // localStorage.setItem(key, toDo);
-
-  project;
+  retrieveTasks;
 
 }
 

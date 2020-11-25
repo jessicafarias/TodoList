@@ -5,6 +5,12 @@ const project = () => {
   let project = [];
   project.push(toDo);
   project.push(toDo);
+  project.push(toDo);
+  project.push(toDo);
+  project.push(toDo);
+  project.push(toDo);
+  project.push(toDo);
+  project.push(toDo);
 
   localStorage.setItem("work_stuff", JSON.stringify(project));
   let tasks = JSON.parse(localStorage.getItem("work_stuff") || "[]");
