@@ -9,7 +9,6 @@ const retrieveTasks = () => {
     task_container.appendChild(list_item);
   });
 
-  console.log(tasks);
 }
 
 export default retrieveTasks();
