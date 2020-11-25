@@ -6,9 +6,10 @@ const project = () => {
   project.push(toDo);
   project.push(toDo);
 
-  window.localStorage.setItem('work_stuff', project);
-  let task1= window.localStorage.getItem('work_stuff');
-  document.getElementById('c1_task1').innerHTML=task1[0].title;
+  localStorage.setItem("work_stuff", JSON.stringify(project));
+  let tasks = JSON.parse(localStorage.getItem("work_stuff") || "[]");
+
+  document.getElementById('c1_task1').innerHTML = tasks[0].title;
 
   return true;
 
