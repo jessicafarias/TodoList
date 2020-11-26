@@ -1,4 +1,5 @@
-import retrieveTasks from './retrieve_tasks.js'
+import retrieveTasks from './retrieve_tasks.js';
+
 const retrieveProjects = () => {
 
   const categories = document.getElementById('categories_container');
@@ -12,6 +13,8 @@ const retrieveProjects = () => {
     } )
     categories.appendChild(item);
   }
+
+  return true;
 }
 
 export default retrieveProjects;

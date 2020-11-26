@@ -33,6 +33,51 @@
 
         <!-- MAIN CONTENT -->
         <div class="col-9 py-3">
+          <div>
+
+            <form>
+              <div class="form-group">
+                <label class="form-text">New task</label>
+                <div class="row">
+                  <div class="col-4">
+                    <label class="form-text">Task title</label>
+                    <input class="form-control" id="new_task_title">
+                  </div>
+                  <div class="col-3">
+                    <label class="form-text">Task due date</label>
+                    <input class="form-control" id="new_task_due_date">
+                  </div>
+                  <div class="col-2">
+                    <label class="form-text">Priority</label>
+                    <input class="form-control" id="new_task_priority">
+                  </div>
+                  <div class="col-3">
+                    <label class="form-text">Project</label>
+                    <div class="dropdown w-100">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                      </button>
+                      <div class="dropdown-menu" id="dropdown" aria-labelledby="dropdownMenuButton"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <label class="form-text">Task desription</label>
+                    <input class="form-control" id="new_task_description">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="pt-2 pb-4">
+                      <div class="btn btn-success w-100" id="create_project">Submit</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
           <h4 class="pl-3">Tasks</h4>
           <ul class="list-group" id="tasks_container">
           </ul>
