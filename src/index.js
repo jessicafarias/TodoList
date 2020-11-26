@@ -8,9 +8,9 @@ import project from './project';
 const index = () =>{
 
   const new_project = document.getElementById('create_project');
+  new_project.addEventListener("click", project);
+  retrieveProjects();
 
-  retrieveTasks;
-  retrieveProjects;
 }
 
 index();
