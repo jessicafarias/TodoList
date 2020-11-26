@@ -11,6 +11,7 @@ const index = () =>{
   const new_project = document.getElementById('create_project');
   new_project.addEventListener("click", project);
   retrieveProjects();
+  tasksIndex();
 
   const new_task  = document.getElementById('create_task');
   new_task.addEventListener("click", () => {

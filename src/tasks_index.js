@@ -1,3 +1,5 @@
+import tasksListing from './tasks_listing';
+
 const tasksIndex = () => {
   const arr = []
   for(let i = 0; i < localStorage.length; i++){
@@ -7,15 +9,7 @@ const tasksIndex = () => {
     }
   }
 
-  const task_container = document.getElementById('tasks_container');
-  task_container.innerHTML ='';
-
-  arr.forEach(element => {
-    const list_item = document.createElement('li');
-    list_item.classList.add('list-group-item');
-    list_item.innerHTML= "Tast title: " + element.title + " Date due " + element.dueDate;
-    task_container.appendChild(list_item);
-  });
+  tasksListing(arr);
 
   const addButton = document.getElementById('create_task')
 
