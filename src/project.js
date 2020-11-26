@@ -4,7 +4,6 @@ import toDo from './todo.js';
 const project = () => {
 
   const project = [];
-  project.push(toDo);
 
   const project_name = document.getElementById('new_project_name').value;
 
