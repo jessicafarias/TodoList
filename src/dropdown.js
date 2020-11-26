@@ -2,8 +2,7 @@ const dropdown = () => {
   const categories = document.getElementById('dropdown');
 
   for(let i = 0; i <  localStorage.length; i++){
-    const item = document.createElement('div');
-    item.classList.add('dropdown-item');
+    const item = document.createElement('option');
     item.innerHTML = localStorage.key(i);
     categories.appendChild(item);
   }

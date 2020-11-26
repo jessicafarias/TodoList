@@ -1,6 +1,5 @@
 import retrieveProjects from './retrieve_projects.js';
 import toDo from './todo.js';
-import dropdown from './dropdown';
 
 const project = () => {
 
@@ -12,7 +11,6 @@ const project = () => {
   localStorage.setItem(project_name, JSON.stringify(project));
 
   retrieveProjects();
-  dropdown();
 
   return true;
 

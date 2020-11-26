@@ -1,4 +1,5 @@
 import retrieveTasks from './retrieve_tasks.js';
+import dropdown from './dropdown';
 
 const retrieveProjects = () => {
 
@@ -13,6 +14,7 @@ const retrieveProjects = () => {
     } )
     categories.appendChild(item);
   }
+  dropdown();
 
   return true;
 }
