@@ -4,19 +4,22 @@ const retrieveTasks = (key) => {
   const task_container = document.getElementById('tasks_container');
   task_container.innerHTML ='';
 
+  
   tasks.forEach(element => {
     const list_item = document.createElement('li');
     list_item.classList.add('list-group-item');
     list_item.innerHTML= "Tast title: "+element.title + " Date due " +element.dueDate;
     task_container.appendChild(list_item);
+
+    
+    const button = document.createElement('button');
+    button.innerHTML='Delete';
+    list_item.appendChild(button);
+    //button.addEventListener("click", )
+    
   });
 
   const addButton = document.getElementById('create_task')
-
-  addButton.addEventListener('click', () => {
-    console.log('helllo world')
-    retrieveTasks(key);
-  })
 
   return true
 

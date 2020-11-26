@@ -19,9 +19,6 @@ const tasksIndex = () => {
 
   const addButton = document.getElementById('create_task')
 
-  addButton.addEventListener('click', () => {
-    tasksIndex();
-  })
 
   return(true);
 }

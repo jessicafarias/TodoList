@@ -1,3 +1,5 @@
+import retrieveTasks from './retrieve_tasks'
+
 const toDo = () => {
 
   const title = document.getElementById('new_task_title').value;
@@ -19,6 +21,10 @@ const toDo = () => {
 
   arr.push(todo);
   localStorage.setItem(droplist, JSON.stringify(arr));
+
+  console.log(droplist +"2");
+  retrieveTasks(droplist);
+
 
   return todo;
 }

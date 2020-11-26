@@ -1,5 +1,4 @@
 import retrieveProjects from './retrieve_projects.js';
-import toDo from './todo.js';
 
 const project = () => {
 

@@ -13,8 +13,9 @@ const index = () =>{
   retrieveProjects();
 
   const new_task  = document.getElementById('create_task');
-
-  tasksIndex();
+  new_task.addEventListener("click", () => {
+    toDo();
+  });
 
 }
 
