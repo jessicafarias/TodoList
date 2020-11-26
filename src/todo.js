@@ -5,7 +5,6 @@ const toDo = () => {
   const dueDate = document.getElementById('new_task_due_date').value;
   const priority = document.getElementById('new_task_priority').value;
 
-
   function ToDo(title, description, dueDate, priority) {
     this.title = title;
     this.description = description;
@@ -16,13 +15,11 @@ const toDo = () => {
   let todo = new ToDo(title, description, dueDate, priority);
 
   const droplist = document.getElementById('dropdown').value;
-  const arr = JSON.parse(localStorage.getItem(droplist)); 
-  
+  const arr = JSON.parse(localStorage.getItem(droplist));
+
   arr.push(todo);
-  console.log(arr);
   localStorage.setItem(droplist, JSON.stringify(arr));
 
-  
   return todo;
 }
 

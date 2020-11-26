@@ -4,6 +4,7 @@ import './style.css';
 import retrieveProjects from './retrieve_projects';
 import project from './project.js';
 import toDo from './todo.js';
+import tasksIndex from './tasks_index';
 
 const index = () =>{
 
@@ -12,7 +13,8 @@ const index = () =>{
   retrieveProjects();
 
   const new_task  = document.getElementById('create_task');
-  new_task.addEventListener("click", toDo);
+
+  tasksIndex();
 
 }
 

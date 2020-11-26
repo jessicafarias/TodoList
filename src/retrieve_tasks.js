@@ -1,6 +1,5 @@
 
 const retrieveTasks = (key) => {
-
   let tasks = JSON.parse(localStorage.getItem(key) || "[]");
   const task_container = document.getElementById('tasks_container');
   task_container.innerHTML ='';
@@ -11,6 +10,13 @@ const retrieveTasks = (key) => {
     list_item.innerHTML= "Tast title: "+element.title + " Date due " +element.dueDate;
     task_container.appendChild(list_item);
   });
+
+  const addButton = document.getElementById('create_task')
+
+  addButton.addEventListener('click', () => {
+    console.log('helllo world')
+    retrieveTasks(key);
+  })
 
   return true
 
