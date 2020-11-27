@@ -17,10 +17,27 @@ const retrieveProjects = () => {
   for (let i = 0; i < localStorage.length; i++) {
     const item = document.createElement('li');
     item.classList.add('list-group-item', 'button-edit');
-    item.innerHTML=localStorage.key(i);
-    item.addEventListener("click", () => {
+
+    const dflex = document.createElement('div');
+    dflex.classList.add('d-flex', 'justify-content-between');
+
+    const paragraph = document.createElement('p');
+    paragraph.innerHTML = localStorage.key(i);
+    paragraph.addEventListener("click", () => {
       tasksIndex(localStorage.key(i));
-    } )
+    })
+
+    const delButton= document.createElement('div');
+    delButton.classList.add('btn', 'btn-danger');
+    delButton.innerHTML = 'Delete';
+    delButton.addEventListener('click', () => {
+      localStorage.removeItem(localStorage.key(i));
+      retrieveProjects();
+    })
+
+    dflex.appendChild(paragraph);
+    dflex.appendChild(delButton);
+    item.appendChild(dflex);
     categories.appendChild(item);
   }
   dropdown();
