@@ -20,7 +20,7 @@ const tasksListing = (tasks) => {
     delButton.innerHTML = 'Delete';
 
     delButton.addEventListener('click', () => {
-      deleteTask(tasks, tasks.indexOf(element));
+      deleteTask(element);
     })
 
     dflex.appendChild(info);
