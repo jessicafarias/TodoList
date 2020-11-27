@@ -1,4 +1,3 @@
-import retrieveTasks from './retrieve_tasks';
 import dropdown from './dropdown';
 import tasksIndex from './tasks_index';
 
@@ -20,7 +19,7 @@ const retrieveProjects = () => {
     item.classList.add('list-group-item', 'button-edit');
     item.innerHTML=localStorage.key(i);
     item.addEventListener("click", () => {
-      retrieveTasks(localStorage.key(i));
+      tasksIndex(localStorage.key(i));
     } )
     categories.appendChild(item);
   }

@@ -1,4 +1,4 @@
-import retrieveTasks from './retrieve_tasks'
+import tasksIndex from './tasks_index';
 
 const toDo = () => {
 
@@ -23,8 +23,7 @@ const toDo = () => {
   localStorage.setItem(droplist, JSON.stringify(arr));
 
   console.log(droplist +"2");
-  retrieveTasks(droplist);
-
+  tasksIndex(droplist);
 
   return todo;
 }
