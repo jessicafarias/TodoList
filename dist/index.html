@@ -3,7 +3,7 @@
   <head>
     <title>Todo List</title>
   </head>
-  <body class="">
+  <body>
 
     <nav class="bg-dark p-3 text-white sticky-top">
       <h1 class="h3 mb-0">Todo List</h1>
@@ -14,7 +14,7 @@
         <!-- SIDEBAR -->
         <div class="col-3 py-3">
           <div>
-            <h4 class="">Categories</h4>
+            <h4>Categories</h4>
             <ul class="list-group pb-0" id="categories_container">
             </ul>
           </div>
@@ -23,7 +23,7 @@
               <div class="form-group">
                 <input class="form-control" id="new_project_name" placeholder="New category">
                 <div class="pt-2">
-                  <div class="btn btn-success w-100" id="create_project">New project</div>
+                  <div class="btn btn-success w-100" id="create_project">New category</div>
                 </div>
               </div>
             </form>
@@ -32,7 +32,7 @@
 
         <!-- MAIN CONTENT -->
         <div class="col-9 py-3">
-          <h4 class="pl-3">Tasks</h4>
+          <h4><span id="category_name"></span>tasks</h4>
           <ul class="list-group" id="tasks_container">
           </ul>
           <div class="mt-3">
@@ -50,8 +50,7 @@
                     <input class="form-control" id="new_task_priority" placeholder="Priority">
                   </div>
                   <div class="col-3">
-                    <select id="dropdown" class="form-control">
-                      <option>Project:</option>
+                    <select id="dropdown" class="form-control" plceholder="Category">
                     </select>
                   </div>
                 </div>
@@ -89,16 +88,19 @@
 
           <div class="modal-body">
             <form action="" class="form-group">
-              <input class="form-control " type="text" id="modal_description" placeholder="description">
-              <input class="form-control " type="text" id="modal_title" placeholder="title">
-              <input class="form-control " type="text" id="modal_dueDate" placeholder="due date">
+              <label class="form-text">Title:</label>
+              <input class="form-control" type="text" id="modal_title" placeholder="title">
+              <label class="form-text">Due date:</label>
+              <input class="form-control" type="text" id="modal_dueDate" placeholder="due date">
+              <label class="form-text">Priority</label>
               <input class="form-control " type="text" id="modal_priority" placeholder="priority">
+              <label class="form-text">Description</label>
+              <input class="form-control" type="text" id="modal_description" placeholder="description">
             </form>
           </div>
 
           <div class="modal-footer">
-            <div class="" id="edit_button_container"></div>
-
+            <div id="edit_button_container"></div>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
         </div>

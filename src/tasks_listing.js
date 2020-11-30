@@ -10,7 +10,7 @@ const tasksListing = (tasks, taskContainer, verify) => {
     const dflex = document.createElement('div');
     dflex.classList.add('d-flex', 'justify-content-between');
     const info = document.createElement('span');
-    info.innerHTML = `Tast title: ${key[j].title} Date due ${key[j].dueDate}`;
+    info.innerHTML = `Task title: ${key[j].title} Date due ${key[j].dueDate}`;
 
 
     dflex.appendChild(info);
