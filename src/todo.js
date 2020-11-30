@@ -22,7 +22,6 @@ const toDo = () => {
   arr.push(todo);
   localStorage.setItem(droplist, JSON.stringify(arr));
 
-  console.log(droplist +"2");
   tasksIndex(droplist);
 
   return todo;

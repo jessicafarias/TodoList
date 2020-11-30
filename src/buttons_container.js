@@ -30,17 +30,22 @@ const buttonsContainer = (tasks, key, verify, j) => {
     document.getElementById('modal_description').value = key[j].description;
     document.getElementById('modal_priority').value = key[j].priority;
     document.getElementById('modal_dueDate').value = key[j].dueDate;
-    const modalSubmit = document.getElementById('update_data');
-    modalSubmit.removeEventListener('click', updateTask(), true);
+    const editContainer = document.getElementById('edit_button_container');
+    editContainer.innerHTML = '';
 
-    modalSubmit.addEventListener('click', () => {
-      // add feature here;
-      updateTask();
+    const editButton = document.createElement('button');
+    editButton.classList.add('btn', 'btn-info');
+    editButton.innerHTML = 'Update';
+    editButton.dataset.dismiss = "modal";
+    editButton.addEventListener('click', () => {
+      updateTask(tasks, j);
     })
+
+    editContainer.appendChild(editButton);
   });
 
-    btnContainer.appendChild(editButton);
-    btnContainer.appendChild(delButton);
+  btnContainer.appendChild(editButton);
+  btnContainer.appendChild(delButton);
 
   return btnContainer;
 }

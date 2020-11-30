@@ -1,5 +1,6 @@
-const updateTask = () => {
-  console.log('this is working');
+const updateTask = (key, index) => {
+  const tasks = JSON.parse(localStorage.getItem(key));
+  console.log(tasks[index]);
 }
 
 export default updateTask;
