@@ -10,11 +10,11 @@ const tasksIndex = (project) => {
   if (project === 0) {
     for (let i = 0; i < localStorage.length; i += 1) {
       tasksListing(localStorage.key(i), taskContainer, false);
-      document.getElementById('category_name').innerHTML = "All "
+      document.getElementById('category_name').innerHTML = 'All ';
     }
   } else {
     tasksListing(project, taskContainer, true);
-    document.getElementById('category_name').innerHTML = project + ' category '
+    document.getElementById('category_name').innerHTML = `${project} category `;
   }
   return (true);
 };
