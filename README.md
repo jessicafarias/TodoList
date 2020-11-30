@@ -14,7 +14,7 @@
 ![screenshot](./src/img/screenshot.png)
 
 #### Livedemo
-- [Githack](https://rawcdn.githack.com/jessicafarias/TodoList/feature/list/dist/index.html)
+- [GitHub Pages](https://jessicafarias.github.io/TodoList/)
 
 
 ## Getting started
