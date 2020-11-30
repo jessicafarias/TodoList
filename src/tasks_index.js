@@ -1,19 +1,20 @@
+/* eslint import/no-cycle:"off", curly:"off" */
 import tasksListing from './tasks_listing';
 
 const tasksIndex = (project) => {
   project = project || 0;
 
-  const task_container = document.getElementById('tasks_container');
-  task_container.innerHTML ='';
+  const taskContainer = document.getElementById('tasks_container');
+  taskContainer.innerHTML = '';
 
-  if(project === 0){
-    for(let i = 0; i < localStorage.length; i++){
-      tasksListing(localStorage.key(i), task_container, false);
+  if (project === 0) {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      tasksListing(localStorage.key(i), taskContainer, false);
     }
-  }else{
-    tasksListing(project, task_container, true);
+  } else {
+    tasksListing(project, taskContainer, true);
   }
-  return(true);
-}
+  return (true);
+};
 
 export default tasksIndex;

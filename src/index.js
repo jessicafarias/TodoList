@@ -1,24 +1,22 @@
+/* eslint import/no-cycle:"off", curly:"off" */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import './style.css';
 import retrieveProjects from './retrieve_projects';
-import project from './project.js';
-import toDo from './todo.js';
+import project from './project';
 import tasksIndex from './tasks_index';
-import newTask from './new_task'
+import createTask from './new_task';
 
-const index = () =>{
-
-  const new_project = document.getElementById('create_project');
-  new_project.addEventListener("click", project);
+const index = () => {
+  const newProject = document.getElementById('create_project');
+  newProject.addEventListener('click', project);
   retrieveProjects();
   tasksIndex();
 
-  const new_task  = document.getElementById('create_task');
-  new_task.addEventListener("click", () => {
-    newTask();
+  const newTask = document.getElementById('create_task');
+  newTask.addEventListener('click', () => {
+    createTask();
   });
-
-}
+};
 
 index();
