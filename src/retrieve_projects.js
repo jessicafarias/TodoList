@@ -32,6 +32,7 @@ const retrieveProjects = () => {
     delButton.addEventListener('click', () => {
       localStorage.removeItem(localStorage.key(i));
       retrieveProjects();
+      tasksIndex();
     });
 
     dflex.appendChild(paragraph);
