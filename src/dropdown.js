@@ -1,3 +1,4 @@
+
 const dropdown = () => {
   const categories = document.getElementById('dropdown');
   categories.innerHTML = '';
