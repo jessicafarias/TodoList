@@ -3,17 +3,26 @@ import dropdown from './src/dropdown';
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-const dom = new JSDOM(`<!DOCTYPE html><p id="dropdown">Hello world</p>`);
-console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
+beforeEach(function() {
+  return JSDOM.fromFile('./dist/index.html')
+  .then((dom) => {
+    console.log(dom.window.document.getElementById('create_task').textContent +"sjkdn");
+  });
+}); //Display the text inside create_task
 
-test('use jsdom in this test file', () => {
-  const element = document.createElement('div');
-  expect(element).not.toBeNull();
-});
 
-/*
-test('testing dropdown', ()=>{
-  const element = document.getElementById('dropdown');
-  expect(dropdown()).toBeTruthy();
-});
-*/
+test('TESTING DROPDOWN', () => {
+  let a =true;
+  beforeEach(function() {
+    JSDOM.fromFile('./dist/index.html')
+    .then((dom) => {
+      //console.log(dom.window.document.getElementById('create_task').textContent);
+      a=false;//Do not oveerride
+      expect(dropdown()).toBeFalsy(); //No passe
+      //expect(dropdown()).toBetrue(); //Pass
+    });
+  });
+  expect(a.toBeFalsy)
+  console.log(a);
+}); //Do not override a;
+
