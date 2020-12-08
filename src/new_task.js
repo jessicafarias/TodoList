@@ -17,12 +17,12 @@ const createTask = (someValue) => {
     localStorage.setItem(droplist, JSON.stringify(arr));
 
     tasksIndex(droplist);
+    return todo;
 
   }catch(error){
     return error.message
   }
 
-  return todo;
 };
 
 export default createTask;
