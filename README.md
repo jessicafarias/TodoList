@@ -7,7 +7,8 @@
 - Create new tasks for each of those categories;
 - Index all of the tasks of all of the categories;
 - Delete and edit tasks;
-- Delete categories.
+- Delete categories;
+- Use Jest for testing modules.
 
 #### Screenshot
 
@@ -23,6 +24,9 @@
 - run `npx webpack` at the root of the project;
 - go to `../dist`;
 - open `index.html` with you favorite browser.
+
+## Testing
+- run `npm run test` on the project root.
 
 
 ## Authors

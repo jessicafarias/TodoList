@@ -11,35 +11,41 @@ const retrieveProjects = () => {
   all.addEventListener('click', () => {
     tasksIndex();
   });
-  categories.appendChild(all);
 
-  for (let i = 0; i < localStorage.length; i += 1) {
-    const item = document.createElement('li');
-    item.classList.add('list-group-item', 'button-edit');
+  try {
+    categories.appendChild(all);
 
-    const dflex = document.createElement('div');
-    dflex.classList.add('d-flex', 'justify-content-between');
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const item = document.createElement('li');
+      item.classList.add('list-group-item', 'button-edit');
 
-    const paragraph = document.createElement('p');
-    paragraph.innerHTML = localStorage.key(i);
-    paragraph.addEventListener('click', () => {
-      tasksIndex(localStorage.key(i));
-    });
+      const dflex = document.createElement('div');
+      dflex.classList.add('d-flex', 'justify-content-between');
 
-    const delButton = document.createElement('div');
-    delButton.classList.add('btn', 'btn-danger');
-    delButton.innerHTML = 'Delete';
-    delButton.addEventListener('click', () => {
-      localStorage.removeItem(localStorage.key(i));
-      retrieveProjects();
-      tasksIndex();
-    });
+      const paragraph = document.createElement('p');
+      paragraph.innerHTML = localStorage.key(i);
+      paragraph.addEventListener('click', () => {
+        tasksIndex(localStorage.key(i));
+      });
 
-    dflex.appendChild(paragraph);
-    dflex.appendChild(delButton);
-    item.appendChild(dflex);
-    categories.appendChild(item);
+      const delButton = document.createElement('div');
+      delButton.classList.add('btn', 'btn-danger');
+      delButton.innerHTML = 'Delete';
+      delButton.addEventListener('click', () => {
+        localStorage.removeItem(localStorage.key(i));
+        retrieveProjects();
+        tasksIndex();
+      });
+
+      dflex.appendChild(paragraph);
+      dflex.appendChild(delButton);
+      item.appendChild(dflex);
+      categories.appendChild(item);
+    }
+  } catch (error) {
+    return error.message;
   }
+
   dropdown();
 
   return true;
