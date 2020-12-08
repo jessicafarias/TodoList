@@ -1,15 +1,14 @@
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-
 import buttonsContainer from '../src/buttons_container';
 
+const jsdom = require('jsdom');
+
+const { JSDOM } = jsdom;
+
 describe('MODULE BUTTONS CONTAINER TASK', () => {
-  beforeEach(function() {
-    return JSDOM.fromFile('./dist/index.html')
+  beforeEach(() => JSDOM.fromFile('./dist/index.html')
     .then((dom) => {
       document.body.innerHTML = dom.window.document.body.outerHTML;
-    });
-  });
+    }));
 });
 
 it('Expects to get a HTML div element', () => {

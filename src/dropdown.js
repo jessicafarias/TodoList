@@ -1,6 +1,6 @@
 
 const dropdown = () => {
-  try{
+  try {
     const categories = document.getElementById('dropdown');
     categories.innerHTML = '';
 
@@ -13,8 +13,8 @@ const dropdown = () => {
       item.innerHTML = localStorage.key(i);
       categories.appendChild(item);
     }
-  }catch(error){
-    return false
+  } catch (error) {
+    return false;
   }
 
   return true;

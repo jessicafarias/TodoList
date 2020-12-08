@@ -1,15 +1,14 @@
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-
 import dropdown from '../src/dropdown';
 
+const jsdom = require('jsdom');
+
+const { JSDOM } = jsdom;
+
 describe('MODULE DROPDOWN TEST', () => {
-  beforeEach(function() {
-    return JSDOM.fromFile('./dist/index.html')
+  beforeEach(() => JSDOM.fromFile('./dist/index.html')
     .then((dom) => {
       document.body.innerHTML = dom.window.document.body.outerHTML;
-    });
-  });
+    }));
 
   describe('test1', () => {
     it('Testing if dropdown exist', () => {
@@ -22,9 +21,7 @@ describe('MODULE DROPDOWN TEST', () => {
     });
 
     it('Testing dropdown"', () => {
-      expect(dropdown()).not.toBeFalsy()
+      expect(dropdown()).not.toBeFalsy();
     });
-
   });
-
 });

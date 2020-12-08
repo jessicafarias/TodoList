@@ -51,5 +51,4 @@ const buttonsContainer = (tasks, key, verify, j) => {
 };
 
 
-
 export default buttonsContainer;

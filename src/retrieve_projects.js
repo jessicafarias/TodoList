@@ -12,7 +12,7 @@ const retrieveProjects = () => {
     tasksIndex();
   });
 
-  try{
+  try {
     categories.appendChild(all);
 
     for (let i = 0; i < localStorage.length; i += 1) {
@@ -42,9 +42,8 @@ const retrieveProjects = () => {
       item.appendChild(dflex);
       categories.appendChild(item);
     }
-
-  }catch(error){
-    return error.message
+  } catch (error) {
+    return error.message;
   }
 
   dropdown();

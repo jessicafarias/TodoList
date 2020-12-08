@@ -7,7 +7,8 @@
 - Create new tasks for each of those categories;
 - Index all of the tasks of all of the categories;
 - Delete and edit tasks;
-- Delete categories.
+- Delete categories;
+- Use Jest for testing modules.
 
 #### Screenshot
 

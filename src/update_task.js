@@ -9,19 +9,17 @@ const updateTask = (key, index) => {
   const dueDate = document.getElementById('modal_dueDate').value;
   const priority = document.getElementById('modal_priority').value;
 
-    try{
-      const todo = toDo(title, description, dueDate, priority);
-      tasks.splice(index, 1, todo);
-    }catch(error)
-    {
-      return error.message
-    }
+  try {
+    const todo = toDo(title, description, dueDate, priority);
+    tasks.splice(index, 1, todo);
+  } catch (error) {
+    return error.message;
+  }
 
   localStorage.setItem(key, JSON.stringify(tasks));
   tasksIndex(key);
 
   return true;
-
 };
 
 export default updateTask;

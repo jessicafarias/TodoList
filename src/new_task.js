@@ -2,7 +2,7 @@ import ToDo from './todo';
 import tasksIndex from './tasks_index';
 
 const createTask = (someValue) => {
-  try{
+  try {
     const title = document.getElementById('new_task_title').value;
     const description = document.getElementById('new_task_description').value;
     const dueDate = document.getElementById('new_task_due_date').value;
@@ -18,11 +18,9 @@ const createTask = (someValue) => {
 
     tasksIndex(droplist);
     return todo;
-
-  }catch(error){
-    return error.message
+  } catch (error) {
+    return error.message;
   }
-
 };
 
 export default createTask;
