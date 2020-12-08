@@ -4,7 +4,7 @@ const { JSDOM } = jsdom;
 import tasksIndex from '../src/tasks_index';
 
 
-describe('MODULE DROPDOWN TEST', () => {
+describe('MODULE TASKS INDEX TEST', () => {
   beforeEach(function() {
     return JSDOM.fromFile('./dist/index.html')
     .then((dom) => {

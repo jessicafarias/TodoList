@@ -3,7 +3,7 @@ const { JSDOM } = jsdom;
 
 import buttonsContainer from '../src/buttons_container';
 
-describe('MODULE UPDATE TASK', () => {
+describe('MODULE BUTTONS CONTAINER TASK', () => {
   beforeEach(function() {
     return JSDOM.fromFile('./dist/index.html')
     .then((dom) => {

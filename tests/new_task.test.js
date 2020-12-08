@@ -3,7 +3,7 @@ const { JSDOM } = jsdom;
 
 import createTask from '../src/new_task';
 
-describe('MODULE DROPDOWN TEST', () => {
+describe('MODULE NEW TASK TEST', () => {
   beforeEach(function() {
     return JSDOM.fromFile('./dist/index.html')
     .then((dom) => {
