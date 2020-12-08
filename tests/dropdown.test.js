@@ -1,7 +1,7 @@
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-import dropdown from './src/dropdown';
+import dropdown from '../src/dropdown';
 
 describe('MODULE DROPDOWN TEST', () => {
   beforeEach(function() {
@@ -16,7 +16,7 @@ describe('MODULE DROPDOWN TEST', () => {
       const element2 = document.getElementById('dropdown');
       expect(element2).not.toBeNull();
     });
-    
+
     it('Testing dropdown return true"', () => {
       expect(dropdown()).toBeTruthy();
     });
@@ -24,7 +24,7 @@ describe('MODULE DROPDOWN TEST', () => {
     it('Testing dropdown"', () => {
       expect(dropdown()).not.toBeFalsy()
     });
-    
+
   });
 
 });

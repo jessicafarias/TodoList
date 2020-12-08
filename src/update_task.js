@@ -19,7 +19,7 @@ const updateTask = (key, index) => {
 
   localStorage.setItem(key, JSON.stringify(tasks));
   tasksIndex(key);
-  
+
   return true;
 
 };

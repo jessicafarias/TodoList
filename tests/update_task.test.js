@@ -1,7 +1,7 @@
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-import UpdateTask from './src/update_task';
+import updateTask from '../src/update_task';
 
 describe('MODULE UPDATE TASK', () => {
   beforeEach(function() {
@@ -13,11 +13,11 @@ describe('MODULE UPDATE TASK', () => {
 
   describe('Testing localstorage', () => {
     it('Return error message if cant find key in localstorage', () => {
-      expect(UpdateTask("key",0)).toBe("Cannot read property 'splice' of null");
+      expect(updateTask("key",0)).toBe("Cannot read property 'splice' of null");
     });
     it('Return true find key in localstorage', () => {
       localStorage.setItem("key", JSON.stringify([]));
-      expect(UpdateTask("key",0)).toBeTruthy();
+      expect(updateTask("key",0)).toBeTruthy();
     });
   });
 

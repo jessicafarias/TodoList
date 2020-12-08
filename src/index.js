@@ -15,7 +15,7 @@ const index = () => {
 
   const newTask = document.getElementById('create_task');
   newTask.addEventListener('click', () => {
-    createTask();
+    createTask(document.getElementById('dropdown').value);
   });
 };
 
