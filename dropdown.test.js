@@ -1,28 +1,30 @@
-import dropdown from './src/dropdown';
-
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-beforeEach(function() {
-  return JSDOM.fromFile('./dist/index.html')
-  .then((dom) => {
-    console.log(dom.window.document.getElementById('create_task').textContent +"sjkdn");
-  });
-}); //Display the text inside create_task
+import dropdown from './src/dropdown';
 
-
-test('TESTING DROPDOWN', () => {
-  let a =true;
+describe('MODULE DROPDOWN TEST', () => {
   beforeEach(function() {
-    JSDOM.fromFile('./dist/index.html')
+    return JSDOM.fromFile('./dist/index.html')
     .then((dom) => {
-      //console.log(dom.window.document.getElementById('create_task').textContent);
-      a=false;//Do not oveerride
-      expect(dropdown()).toBeFalsy(); //No passe
-      //expect(dropdown()).toBetrue(); //Pass
+      document.body.innerHTML = dom.window.document.body.outerHTML;
     });
   });
-  expect(a.toBeFalsy)
-  console.log(a);
-}); //Do not override a;
 
+  describe('test1', () => {
+    it('Testing create task has ', () => {
+      const element2 = document.getElementById('create_task').textContent;
+      expect(element2).toEqual('New task');
+    });
+    
+    it('Testing dropdown return true"', () => {
+      expect(dropdown()).toBeTruthy();
+    });
+
+    it('Testing dropdown"', () => {
+      expect(dropdown()).not.toBeFalsy()
+    });
+    
+  });
+
+});
