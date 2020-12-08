@@ -12,9 +12,9 @@ describe('MODULE DROPDOWN TEST', () => {
   });
 
   describe('test1', () => {
-    it('Testing create task has ', () => {
-      const element2 = document.getElementById('create_task').textContent;
-      expect(element2).toEqual('New task');
+    it('Testing if dropdown exist', () => {
+      const element2 = document.getElementById('dropdown');
+      expect(element2).not.toBeNull();
     });
     
     it('Testing dropdown return true"', () => {
