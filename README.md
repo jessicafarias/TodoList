@@ -25,6 +25,9 @@
 - go to `../dist`;
 - open `index.html` with you favorite browser.
 
+## Testing
+- run `npm run test` on the project root.
+
 
 ## Authors
 👤 This is us:
